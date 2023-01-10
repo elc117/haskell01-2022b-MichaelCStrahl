@@ -1,10 +1,10 @@
 -- Calcula a soma do quadrado de dois números
 sumSquares :: Int -> Int -> Int
-sumSquares x y = (x^2) + (y^2)
+sumSquares x y = (x ^ 2) + (y ^ 2)
 
 -- Calcula a área de um circulo
 circleArea :: Float -> Float
-circleArea r = pi*(r^2)
+circleArea r = pi * (r ^ 2)
 
 -- Calcula a idade aproximada de uma pessoa
 age :: Int -> Int -> Int
@@ -29,11 +29,11 @@ isVerb s = last s == 'r'
 -- Verifica se um caractere é uma vogal minúscula
 isVowel :: Char -> Bool
 isVowel v
-  | v == 'a'
-  | v == 'e'
-  | v == 'i'
-  | v == 'o'
-  | v == 'u'
+  | v == 'a' = True
+  | v == 'e' = True
+  | v == 'i' = True
+  | v == 'o' = True
+  | v == 'u' = True
   | otherwise = False
 
 -- Verifica se duas listas iniciam com o mesmo elemento

@@ -1,4 +1,7 @@
 -- Aplica a função htmlItem em uma lista de nomes
+htmlItem :: String -> String
+htmlItem s = "<li>" ++ s ++ "</li>"
+
 itemize :: [String] -> [String]
 itemize list = map htmlItem list
 
@@ -25,12 +28,15 @@ onlyBetween60and80 list = filter f list where f x = x >= 60 && x <= 80
 -- Contar espaços contidos na string informada
 spaces :: [Char] -> Bool
 spaces x
-  | elem ' ' x    = True
+  | elem ' ' x = True
   | otherwise = False
 
 countSpaces :: [Char] -> Int -> Int
-countSpaces list n = if spaces list then n+1 else n+0
+countSpaces list n = if spaces list then n + 1 else n + 0
 
 -- A partir da lista de ráios informada, retornar lista com área de circulos calculada
-calcAreas [Int] = [Int]
-calcAreas list = length $ map (list == ' ')
+circleArea :: Float -> Float
+circleArea r = pi * (r ^ 2)
+
+calcAreas :: [Float] -> [Float]
+calcAreas list = map circleArea list
